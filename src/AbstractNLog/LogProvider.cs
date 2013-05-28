@@ -8,13 +8,17 @@ namespace AbstractNLog
 {
     public static class LogProvider
     {
-        static void CreateSyslogEndpoint(string server, int port)
+        static LogProvider()
+        {
+            LogManager.Configuration = new LoggingConfiguration();
+        }
+
+        public static void AddSyslogEndpoint(string server, int port)
         {
             var syslog = new Syslog(server, port) { Facility = Syslog.SyslogFacility.Local0, Layout = new SimpleLayout("${message}") };
             var loggingRule = new LoggingRule("*", LogLevel.Debug, syslog);
-            var loggingConfiguration = new LoggingConfiguration { LoggingRules = { loggingRule } };
-            loggingConfiguration.AddTarget(server, syslog);
-            LogManager.Configuration = loggingConfiguration;
+            LogManager.Configuration.LoggingRules.Add(loggingRule);
+            LogManager.Configuration.AddTarget(server, syslog);
         }
 
         public static ILog GetLogger<T>(this T obj)
