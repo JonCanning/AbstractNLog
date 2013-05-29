@@ -13,10 +13,10 @@ namespace AbstractNLog
             LogManager.Configuration = new LoggingConfiguration();
         }
 
-        public static void AddSyslogEndpoint(string server, int port, LogLevel logLevel)
+        public static void AddSyslogEndpoint(string server, int port, LogLevel logLevel, string loggerNamePattern = "*")
         {
             var syslog = new Syslog(server, port) { Facility = Syslog.SyslogFacility.Local0, Layout = new SimpleLayout("${message}") };
-            var loggingRule = new LoggingRule(server, logLevel, syslog);
+            var loggingRule = new LoggingRule(loggerNamePattern, logLevel, syslog);
             LogManager.Configuration.LoggingRules.Add(loggingRule);
             LogManager.Configuration.AddTarget(server, syslog);
         }
