@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{2F5DC2
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractNLog.Interfaces", "src\AbstractNLog.Interfaces\AbstractNLog.Interfaces.csproj", "{37177D01-B5C1-4084-85F6-FF0C08E8FA10}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +22,10 @@ Global
 		{217D2F77-FEE2-4AEF-B2DE-F3EE4374D2DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{217D2F77-FEE2-4AEF-B2DE-F3EE4374D2DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{217D2F77-FEE2-4AEF-B2DE-F3EE4374D2DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37177D01-B5C1-4084-85F6-FF0C08E8FA10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37177D01-B5C1-4084-85F6-FF0C08E8FA10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37177D01-B5C1-4084-85F6-FF0C08E8FA10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37177D01-B5C1-4084-85F6-FF0C08E8FA10}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,3 +1,4 @@
+using AbstractNLog.Interfaces;
 using NLog;
 using NLog.Config;
 using NLog.Layouts;

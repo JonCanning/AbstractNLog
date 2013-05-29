@@ -1,5 +1,5 @@
 
-namespace AbstractNLog
+namespace AbstractNLog.Interfaces
 {
     public interface ILog
     {

@@ -1,3 +1,4 @@
+using AbstractNLog.Interfaces;
 using NLog;
 
 namespace AbstractNLog
